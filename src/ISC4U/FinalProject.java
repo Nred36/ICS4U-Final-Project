@@ -85,8 +85,7 @@ public class FinalProject extends JApplet implements ActionListener, KeyListener
 // </editor-fold>
 
     public void paintComponent(Graphics g) {
-        myPic = (Graphics2D) g;
-        System.out.println(myPic.getFont());
+        myPic = (Graphics2D) g;        
         myPic.setFont(new Font("Dialog",Font.PLAIN,15));
         myPic.drawString("Intro", getWidth() / 2-myPic.getFontMetrics().stringWidth("Intro"), getHeight() / 2-myPic.getFontMetrics().getHeight());
     }
