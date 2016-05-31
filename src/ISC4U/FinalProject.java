@@ -6,6 +6,7 @@
 package ISC4U;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -85,6 +86,9 @@ public class FinalProject extends JApplet implements ActionListener, KeyListener
 
     public void paintComponent(Graphics g) {
         myPic = (Graphics2D) g;
+        System.out.println(myPic.getFont());
+        myPic.setFont(new Font("Dialog",Font.PLAIN,15));
+        myPic.drawString("Intro", getWidth() / 2-myPic.getFontMetrics().stringWidth("Intro"), getHeight() / 2-myPic.getFontMetrics().getHeight());
     }
 
     @Override
@@ -122,12 +126,12 @@ public class FinalProject extends JApplet implements ActionListener, KeyListener
     @Override
     public void mouseReleased(MouseEvent e) {
     }
+// <editor-fold defaultstate="collapsed" desc="Mouse Enter and Exit">
 
     @Override
     public void mouseEntered(MouseEvent e) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-// <editor-fold defaultstate="collapsed" desc="mouse Exit">
 
     @Override
     public void mouseExited(MouseEvent e) {
